@@ -1,0 +1,52 @@
+{
+	"name": "las-parser",
+	"version": "0.0.1",
+	"description": "A LAS parser.",
+	"author": "Jeff Seaman",
+	"contributors": [
+		"Jeff Seaman <mr.jeffrey.seaman@gmail.com> (https://www.ngc6822.com)"
+	],
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"prepare": "rollup -c",
+		"start": "nodemon --inspect dev.js --exec babel-node",
+		"benchmarks": "babel-node benchmarks.js",
+		"test": "babel-node test"
+	},
+	"babel": {
+		"plugins": [
+			"@babel/plugin-proposal-class-properties"
+		],
+		"presets": [
+			[
+				"@babel/preset-env",
+				{
+					"targets": {
+						"node": "current"
+					}
+				}
+			]
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.4.4",
+		"@babel/node": "^7.2.2",
+		"@babel/plugin-proposal-class-properties": "^7.4.4",
+		"@babel/preset-env": "^7.4.4",
+		"nodemon": "^1.19.0",
+		"rollup": "^1.12.3",
+		"rollup-plugin-babel": "^4.3.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/obsius/las-parser.git"
+	},
+	"keywords": [
+		"las",
+		"laz",
+		"lidar",
+		"parser",
+		"reader"
+	]
+}
